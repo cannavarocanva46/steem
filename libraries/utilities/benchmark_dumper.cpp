@@ -16,7 +16,7 @@ uint64_t read_u64_value_from(FILE* input, const char* key, unsigned key_length, 
       if( found_pos != nullptr )
       {
          uint64_t result = 0;
-         if( sscanf(found_pos+key_length, "%lu", &result) != 1 )
+         if( sscanf(found_pos+key_length, "%llu", &result) != 1 )
             error_callback(key);
 
          return result;
